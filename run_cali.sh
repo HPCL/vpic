@@ -93,39 +93,39 @@ declare -a metrics=(\
                     "UOPS_DISPATCHED_PORT:PORT_6" \
                     "UOPS_DISPATCHED_PORT:PORT_7" \
                     "PARTIAL_RAT_STALLS:SCOREBOARD" \
-)
-#     "IDQ_UOPS_NOT_DELIVERED:CORE"\
-#     "INST_RETIRED:PREC_DIST"\
-#     "IDQ:MS_UOPS"\
-#     "FP_ARITH_INST_RETIRED:SCALAR_SINGLE"\
-#     "FP_ARITH_INST_RETIRED:128B_PACKED_SINGLE"\
-#     "FP_ARITH_INST_RETIRED:256B_PACKED_SINGLE"\
-#     "FP_ARITH_INST_RETIRED:512B_PACKED_SINGLE"\
-#)
-#                    "PAPI_TOT_CYC" \
-#                    "IDQ_UOPS_NOT_DELIVERED:CORE"\
-#                    "UOPS_ISSUED:ANY"\
-#                    "UOPS_RETIRED:RETIRE_SLOTS"\
-#                    "INT_MISC:RECOVERY_CYCLES"\
-#                    "CYCLE_ACTIVITY:STALLS_MEM_ANY"\
-#                    "RESOURCE_STALLS:SB"\
-#                    "UOPS_EXECUTED:CORE_CYCLES_GE_1" \
-#                    "UOPS_EXECUTED:CORE_CYCLES_GE_2" \
-#                    "UOPS_EXECUTED:CORE_CYCLES_GE_3" \
-#		    "UOPS_EXECUTED:CORE_CYCLES_GE_4" \
-#		    "EXE_ACTIVITY:BOUND_ON_STORES" \
-#		    "EXE_ACTIVITY:EXE_BOUND_0_PORTS" \
-#                    "CYCLE_ACTIVITY:STALLS_L1D_MISS" \
-#                    "CYCLE_ACTIVITY:STALLS_L2_MISS" \
-#                    "CYCLE_ACTIVITY:STALLS_L3_MISS" \
-#                    "PAPI_STL_CCY" \
-#)
-#                    "RS_EVENTS:EMPTY_CYCLES" \
-#                    "CYCLE_ACTIVITY:STALLS_TOTAL"\
-#                    "CYCLE_ACTIVITY:CYCLES_MEM_ANY" \
-#                    "RESOURCE_STALLS:ALL" \
-#                    "RESOURCE_STALLS:ANY" \
-#                   )
+
+     "IDQ_UOPS_NOT_DELIVERED:CORE"\
+     "INST_RETIRED:PREC_DIST"\
+     "IDQ:MS_UOPS"\
+     "FP_ARITH_INST_RETIRED:SCALAR_SINGLE"\
+     "FP_ARITH_INST_RETIRED:128B_PACKED_SINGLE"\
+     "FP_ARITH_INST_RETIRED:256B_PACKED_SINGLE"\
+     "FP_ARITH_INST_RETIRED:512B_PACKED_SINGLE"\
+
+                    "PAPI_TOT_CYC" \
+                    "IDQ_UOPS_NOT_DELIVERED:CORE"\
+                    "UOPS_ISSUED:ANY"\
+                    "UOPS_RETIRED:RETIRE_SLOTS"\
+                    "INT_MISC:RECOVERY_CYCLES"\
+                    "CYCLE_ACTIVITY:STALLS_MEM_ANY"\
+                    "RESOURCE_STALLS:SB"\
+                    "UOPS_EXECUTED:CORE_CYCLES_GE_1" \
+                    "UOPS_EXECUTED:CORE_CYCLES_GE_2" \
+                    "UOPS_EXECUTED:CORE_CYCLES_GE_3" \
+		    "UOPS_EXECUTED:CORE_CYCLES_GE_4" \
+		    "EXE_ACTIVITY:BOUND_ON_STORES" \
+		    "EXE_ACTIVITY:EXE_BOUND_0_PORTS" \
+                    "CYCLE_ACTIVITY:STALLS_L1D_MISS" \
+                    "CYCLE_ACTIVITY:STALLS_L2_MISS" \
+                    "CYCLE_ACTIVITY:STALLS_L3_MISS" \
+                    "PAPI_STL_CCY" \
+
+                    "RS_EVENTS:EMPTY_CYCLES" \
+                    "CYCLE_ACTIVITY:STALLS_TOTAL"\
+                    "CYCLE_ACTIVITY:CYCLES_MEM_ANY" \
+                    "RESOURCE_STALLS:ALL" \
+                    "RESOURCE_STALLS:ANY" \
+                   )
 
 
 
