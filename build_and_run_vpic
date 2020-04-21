@@ -1,0 +1,37 @@
+#!/bin/bash
+
+mkdir build_test
+cd build_test
+
+#../arch/lanl-darwin-int-sky-int-v1-none_cali >& build_vpic.log
+#../arch/lanl-darwin-int-sky-int-v4-port_cali >& build_vpic.log
+#../arch/lanl-darwin-int-sky-int-v8-port_cali >& build_vpic.log
+#../arch/lanl-darwin-int-sky-int-v16-port_cali >& build_vpic.log
+#
+#../arch/lanl-darwin-int-sky-int-v1-none-nosort_cali >& build_vpic.log
+#../arch/lanl-darwin-int-sky-int-v4-port-nosort_cali >& build_vpic.log
+#../arch/lanl-darwin-int-sky-int-v8-port-nosort_cali >& build_vpic.log
+#../arch/lanl-darwin-int-sky-int-v16-port-nosort_cali >& build_vpic.log
+
+#../arch/lanl-darwin-int-sky-int-v4-avx2_cali >& build_vpic.log
+../arch/lanl-darwin-int-sky-int-v8-avx2_cali >& build_vpic.log
+#../arch/lanl-darwin-int-sky-int-v16-avx512_cali >& build_vpic.log
+
+#../arch/lanl-darwin-int-sky-int-v4-avx2-nosort_cali >& build_vpic.log
+#../arch/lanl-darwin-int-sky-int-v8-avx2-nosort_cali >& build_vpic.log
+#../arch/lanl-darwin-int-sky-int-v16-avx512-nosort_cali >& build_vpic.log
+
+SORT=on
+#SORT=off
+
+cd ..
+mkdir run_test
+cd run_test
+ln -s ../build_test/bashrc.modules .
+ln -s ../build_test/bin/vpic .
+cp ../run_int_sky_int_v16_avx512_sort_$SORT/*.cxx .
+cp ../run_int_sky_int_v16_avx512_sort_$SORT/build_vpic_int_sky_28_scaling_strong .
+cp ../run_int_sky_int_v16_avx512_sort_$SORT/run_vpic_int_sky_28_scaling_strong_srun_mpi .
+./build_vpic_int_sky_28_scaling_strong
+rm *.annot *.optrpt
+

@@ -8,3 +8,10 @@ cmake_install.cmake
 .DS_Store
 build
 tags
+run_int_*
+build_int_*
+cali_vpic_*
+build_test
+run_test
+*.tar
+test_cali.txt

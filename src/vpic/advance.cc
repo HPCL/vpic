@@ -10,6 +10,12 @@
 
 #include "vpic.h"
 
+#ifdef USE_CALI
+#include <caliper/cali.h>
+#include <caliper/cali-mpi.h>
+#endif
+
+
 // Use this for Intel and VTune.
 #if defined(VPIC_USE_VTUNE_ADVANCE_P)
 #include "ittnotify.h"
@@ -56,8 +62,16 @@ int vpic_simulation::advance(void) {
   __itt_resume();
   #endif
 
+  #ifdef USE_CALI
+  CALI_MARK_BEGIN("advance_p");
+  #endif
+
   LIST_FOR_EACH( sp, species_list )
     TIC advance_p( sp, accumulator_array, interpolator_array ); TOC( advance_p, 1 );
+
+  #ifdef USE_CALI
+  CALI_MARK_END("advance_p");
+  #endif
 
   // Conditionally pause profiling with Intel VTune.
   #if defined(VPIC_USE_VTUNE_ADVANCE_P)

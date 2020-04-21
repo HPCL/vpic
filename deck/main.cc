@@ -10,6 +10,13 @@
 
 #include "vpic/vpic.h"
 
+
+#ifdef USE_CALI
+#include <caliper/cali.h>
+#include <caliper/cali-mpi.h>
+#endif
+
+
 // Use this for Intel and VTune.
 #if defined(VPIC_USE_VTUNE_ADVANCE)
 #include "ittnotify.h"
@@ -71,6 +78,11 @@ int main(int argc, char** argv)
 
     // Initialize underlying threads and services
     boot_services( &argc, &argv );
+
+#ifdef USE_CALI
+cali_mpi_init();
+#endif
+
 
     // TODO: this would be better if it was bool-like in nature
     const char * fbase = strip_cmdline_string(&argc, &argv, "--restore", NULL);
